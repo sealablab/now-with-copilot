@@ -5,6 +5,10 @@ echo "=========================================="
 echo "VHDL-FORGE 3.0 Environment Setup"
 echo "=========================================="
 
+# Save the workspace directory
+WORKSPACE_DIR="$(pwd)"
+echo "📂 Workspace: $WORKSPACE_DIR"
+
 # Install GHDL dependencies
 echo "📦 Installing GHDL dependencies..."
 apt-get update -qq
@@ -31,6 +35,9 @@ ldconfig
 echo "✅ GHDL installed successfully:"
 ghdl --version
 
+# Return to workspace directory
+cd "$WORKSPACE_DIR"
+
 # Install uv (Python package manager)
 echo "📦 Installing uv..."
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -38,10 +45,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Run cloud setup script
 echo "🔧 Running forge-vhdl cloud setup..."
-if [ -f "scripts/cloud_setup_with_ghdl.py" ]; then
-    uv run python scripts/cloud_setup_with_ghdl.py
+if [ -f "$WORKSPACE_DIR/scripts/cloud_setup_with_ghdl.py" ]; then
+    uv run python "$WORKSPACE_DIR/scripts/cloud_setup_with_ghdl.py"
 else
-    echo "⚠️  Warning: scripts/cloud_setup_with_ghdl.py not found, skipping"
+    echo "⚠️  Warning: $WORKSPACE_DIR/scripts/cloud_setup_with_ghdl.py not found, skipping"
 fi
 
 echo "=========================================="
