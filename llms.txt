@@ -1,15 +1,30 @@
 # forge-vhdl: AI-Powered VHDL Development Template
 
-**GitHub template for VHDL development with Claude Code - optimized for LLM-assisted workflows**
+**GitHub template for VHDL development with AI assistance - optimized for Copilot & Claude workflows**
 
 ## Quick Reference
 
 **What:** Production-ready GitHub template with reusable VHDL components + token-efficient CocoTB tests
-**Where:** Works everywhere - Claude Code Web, GitHub Codespaces, local CLI (auto-detects!)
+**Where:** Works everywhere - GitHub Copilot (VS Code/JetBrains), Claude Code (Web/CLI), GitHub Codespaces
 **Setup:** Zero config in cloud • `brew install ghdl` for local • Env detection: `uv run python .claude/env_detect.py`
 **Test:** CocoTB + GHDL filter (P1 tests <20 lines, 98% noise reduction vs 287 lines)
-**Workflow:** Hybrid recommended - Requirements locally → Agents in cloud → Integrate locally
+**AI Tools:** GitHub Copilot (IDE-integrated) + Claude (autonomous agents) - Hybrid workflow recommended
 **Template:** Clone from https://github.com/vmars-20/forge-vhdl-3v3-vmars → Customize your copy!
+
+## AI Assistant Guides
+
+**GitHub Copilot Edition** ⭐ NEW!
+- **Guide:** [COPILOT.md](COPILOT.md) - IDE-integrated development
+- **Custom Instructions:** [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- **Best for:** Inline suggestions, chat-based development, iterative workflows
+
+**Claude Edition** (Original)
+- **Guide:** [CLAUDE.md](CLAUDE.md) - Autonomous agent workflows
+- **Local Guide:** [.claude/CLAUDE_LOCAL.md](.claude/CLAUDE_LOCAL.md)
+- **Cloud Guide:** [.claude/CLAUDE_CLOUD.md](.claude/CLAUDE_CLOUD.md)
+- **Best for:** Requirements gathering, multi-file generation, batch operations
+
+**Comparison:** [.github/AI_COMPARISON.md](.github/AI_COMPARISON.md) - Choose the right tool for each task
 
 ## Structure
 
